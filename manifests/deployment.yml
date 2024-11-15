@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: akinpipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: akinpipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: akinpipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: akinpipelinesjavascriptdocker 
+          image: mypro690containerregistry.azurecr.io/akinpipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
